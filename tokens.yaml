@@ -1,3 +1,4 @@
 version: v1
 tokens:
-  - marek:1000000
+  - marek:999900
+  - bob:100
