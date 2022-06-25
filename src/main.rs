@@ -15,9 +15,9 @@ fn main() {
     let buf = BufReader::new(file);
     let tokens:TokenYaml = serde_yaml::from_reader(buf).expect("unable to read the yaml...");
     let mut total = 0;
-    let _ret: Vec<i32> = tokens.tokens.iter().map(|x| {
+    let _ret: Vec<u32> = tokens.tokens.iter().map(|x| {
         let split = x.split(":").collect::<Vec<&str>>();
-        let i:i32 = split[1].parse().unwrap();
+        let i:u32 = split[1].parse().unwrap();
         total += i;
         return i;
     }).collect();
